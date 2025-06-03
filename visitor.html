@@ -461,6 +461,17 @@ Swal.fire({
 
     // Tahun auto
     document.getElementById("currentYear").textContent = new Date().getFullYear();
+    
+    window.addEventListener('load', function () {
+  // Delay 5 saat sebelum paparkan kandungan utama
+  setTimeout(function () {
+    const loadingScreen = document.getElementById('loading-screen');
+    const mainContent = document.getElementById('main-content');
+
+    if (loadingScreen) loadingScreen.style.display = 'none';
+    if (mainContent) mainContent.style.display = 'block';
+  }, 1000);
+});
   </script>
 
 </body>
