@@ -12,7 +12,7 @@
 </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lurk - Borang Daftar Pelawat</title>
+  <title>ARIYA - Borang Daftar Pelawat</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
@@ -54,6 +54,28 @@
   padding-top: 50px; /* ruang untuk banner tetap */
     }
 
+
+.background-iframe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  z-index: 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Laraskan ketelusan */
+  z-index: 1;
+}
+
+.page-content {
+  position: relative;
+  z-index: 2;
+}
 
 
 .logo-title {
@@ -429,7 +451,7 @@ function submitForm() {
 
 Swal.fire({
   icon: 'success',
-  title: 'MAKLUMAT BERJAYA DIHANTAR!',
+  title: 'MAKLUMAT BERJAYA DI HANTAR!',
   text: 'Terima kasih. Sila klik OK untuk teruskan.',
   confirmButtonText: 'OK',
   allowOutsideClick: false,
