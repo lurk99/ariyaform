@@ -45,25 +45,26 @@
       margin: 0;
     }
 
-    body {
-      background: url('https://raw.githubusercontent.com/lurk99/img/refs/heads/main/photo-bgpccoding.png') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
+body {
+  background-image: url('https://raw.githubusercontent.com/lurk99/img/refs/heads/main/photo-bgpccoding.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
   min-height: 100vh;
   margin: 0;
-  padding-top: 50px; /* ruang untuk banner tetap */
-    }
-
-
-.background-iframe {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  z-index: 0;
+  padding-top: 60px; /* ruang untuk banner tetap */
 }
+
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* fallback untuk telefon */
+  }
+}
+
+
 
 .overlay {
   position: fixed;
